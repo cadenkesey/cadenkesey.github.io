@@ -18,4 +18,4 @@ A big challenge for me was learning to use Max and learning to write externals. 
 
 The bulk of the programming was writing an external for Max in C that allowed me to create a kind of “blackbox” which I called the music box, which takes in user parameters and outputs a song. In order to program an external I used Microsoft Visual Studio. Programming directly in Max entailed creating a user interface, visualization, and outputting sound.
 
-![Image1](/images/image_1.png)
+![Image1](/images/image_1.png "The input parameters in Max (play/pause, rng seed, tempo)")
