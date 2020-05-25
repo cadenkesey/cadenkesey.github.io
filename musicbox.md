@@ -41,4 +41,33 @@ Then came the algorithms for the bass and melody. Since the chords and drums wer
 
 The basis for the creation of the melody was the idea that the snare drum provides the “backbeat” in rock and pop music. By matching the melody to this backbeat to some degree, the rhythm of the song is emphasized and further cohesion is created between the instruments of the song. Even when playing just the bass and melody without the accompaniment of the other instruments, the songs will have a perceptible groove.
 
+###### Each time the melody’s clock activates, this method is called to play the current note
+![Image6](/images/image_6.png)
 
+###### Abridged code for generating the melody based on the snare drum backbeat
+![Image7](/images/image_7.png)
+
+The final step was adding nice sounding virtual instruments to make the song sound more like rock. Since I wanted the instruments to sound like real acoustic instruments, I found some high quality virtual instruments to use. I ran the output of these through a reverb plugin as well in order to add another layer of cohesion to the sound. This was important to me since having songs sound good right out of the box was a crucial aspect of the project.
+
+###### Virtual instruments and effects for the melody (Electric guitar) in Max
+![Image6](/images/image_8.png)
+
+###### The entire Max application including note and data visualization
+![Image7](/images/image_9.png)
+
+## Summary and Future Work
+
+The biggest challenge was breaking the project down into the smallest pieces I could since there was so much I didn’t know how to tackle. I had to start with pieces that I knew I would be able to scale up. This went from deciding what data structures to use to hold notes and how to keep track of a measure, then up to putting multiple measures for an instrument together to create a musical phrase, then putting phrases together to create songs that had two distinct sections. It was also a good learning experience with abstraction, since the only reason I was able to make four different instruments was by figuring out what commonalities would be shared between them. This allowed me to add instruments easily.
+
+Even with the amount of structure set in place, the majority of the songs were not all that pleasing to listen to. I think more work could have gone into the melody, perhaps by increasing the likelihood of playing the notes from the underlying chord progression. I would have liked to add a user input to change keys since songs are limited to A minor. It would be fairly easy to switch to other minor keys but I would have also liked to allow the user to generate songs in major which I did not even experiment with. Along those lines, I would have liked to be able to randomly generate chord progressions. This would make the songs less predetermined. With randomly generated chord progressions I would more easily be able to expand to major key and perhaps even different modes and other interesting scales. I would have liked to make it so that the drums were procedurally generated although that might be fairly challenging.
+
+Overall the project was a great experience and I am happy with the final result. It was rewarding to be able to bring it through all of the steps of development from the initial concept to the final product. Developing the algorithms for music generation was also exciting as I was able to boil down some basic ideas for how songs are structured and work that into my application. While there is so much that I would have liked to add, the final product was still so satisfying to listen to. It’s so interesting to find one of the generated songs that I really liked and think about how no human actually wrote that song. It’s a unique experience and I was happy to have worked on this project.
+
+### Bibliography
+
+- Cycling ‘74. “Max API.” https://cycling74.com/sdk/max-sdk-8.0.3/html/index.html
+- Cycling ‘74. “Max 8 Documentation.” https://docs.cycling74.com/max8
+- Fox, C. (2006). Genetic Hierarchical Music Structures. FLAIRS Conference 2006, 243-247
+- Franklin, J. A. (2006). Recurrent Neural Networks for Music Computation. INFORMS Journal on Computing, 18(3), 321–338.
+- Papadopoulos, George, Geraint Wiggins (1999). AI Methods for Algorithmic Composition: A Survey, a Critical View and Future Prospects. Proceedings from the AISB’99 Symposium on Musical Creativity, Edinburgh, Scotland, 110-117.
+- Wooller, R., Brown, A., Miranda, E., Berry, R., Diederich, J. (2005). A Framework for Comparison of Process in Algorithmic Music Systems. Generative Arts Practice, 5-7.
