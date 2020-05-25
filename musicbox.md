@@ -19,4 +19,20 @@ A big challenge for me was learning to use Max and learning to write externals. 
 The bulk of the programming was writing an external for Max in C that allowed me to create a kind of “blackbox” which I called the music box, which takes in user parameters and outputs a song. In order to program an external I used Microsoft Visual Studio. Programming directly in Max entailed creating a user interface, visualization, and outputting sound.
 
 ![Image1](/images/image_1.png)
-##### The input parameters in Max (play/pause, rng seed, tempo)
+###### The input parameters in Max (play/pause, rng seed, tempo)
+
+![Image2](/images/image_2.png)
+###### An abridged look at the initialization of a music box object using Max inlets and outlets, Max clocks, and loading in note names with a hashtable.
+
+The first obstacle was determining how to handle the creation of notes. MIDI is a standard for transmitting musical information and I knew that it would be the best output for my application, but I also knew that it would be a hassle to figure out how that would work in C. I figured out that Max could take numbers and pack them together into a proper MIDI format so that virtual instruments would be able to interpret the information as actual notes. This way my object only had to output an integer to represent the note and a float to represent how long to hold it. Once I had this in mind, I knew I would want to use a struct in C to keep the note value and length together, which lent itself well to moving a step further to linked lists for a phrase of notes.
+
+![Image3](/images/image_3.png)
+###### The note struct in C
+
+![Image4](/images/image_4.png)
+###### Packaging the note value and length into MIDI format using Max
+
+Next I had to determine how much of the generated music would be predefined. I wrote code to load in notes from a text file with a hashtable to convert alphabetical note names to integers. C doesn’t have hash tables so I wrote a simple implementation that fit what I needed perfectly. This allowed me to define patterns for the kick and snare, which the program would pick and pair together randomly. I also was able to load in two chord progressions for each song, one for the “verse” and one for the “chorus”. With those aspects predefined in text files, the song would have enough structure to sound coherent. Writing enough patterns would be the main challenge to making sure generated songs didn’t all sound the same.
+
+![Image5](/images/image_5.png)
+###### A list of chord progressions for the verses in a text file
