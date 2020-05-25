@@ -1,3 +1,3 @@
 # My Projects
 
-* [Music Box](http://github.com)
+* [Music Box](/musicbox.md)
