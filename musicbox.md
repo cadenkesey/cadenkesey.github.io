@@ -2,9 +2,7 @@
 
 This project generates music without human intervention given simple limitations and random numbers, allowing unique songs to be created in seconds. Algorithms were written in the programming language C to create rock and pop style songs. These songs are played back using visual programming language Max, so that compositions can be heard using samples of acoustic instruments. This project will demonstrate these methods can be used to produce a virtually endless amount of unique songs.
 
-<iframe width="420" height="315"
-src="https://youtu.be/MM8mgYC7VCY">
-</iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MM8mgYC7VCY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Introduction
 
