@@ -1,3 +1,3 @@
 # My Projects
 
-* [Music Box](/musicbox.md)
+* [Music Box: Algorithmic Music - Using rules and random numbers to compose songs](/musicbox.md)
