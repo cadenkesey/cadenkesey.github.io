@@ -12,6 +12,7 @@ My goal with Lilith was to give myself an opportunity to learn both Unity and C#
 
 ## Enemy 1: Fairy
 
+
 ### Finite State Machine
 
 I used a finite state machine for the Fairy enemy since it is a straightforward and common design for AI in video games. I found tutorials from Table Flip Games to be particularly helpful: https://youtu.be/21yDDUKCQOI. This design allows the Fairy to switch between four different states: Idle, Patrol, Chase, and Attack. My choice to use these states is influenced by the behavior of enemy AI in the original Doom games. The Idle state simply has the Fairy wait in place until a certain amount of time has passed, at which point the Fairy will enter the Patrol state. The Patrol state will move the Fairy to the next Patrol point, where the Fairy will enter the Idle state again. During either of these states the Fairy can move to the Chase state if the player comes within the Fairy's line of sight. The Chase state is the most complicated state. The Fairy wants to get close to the player, but also not so close as to run into the player. This means the Fairy will move towards the player until reaching a certain distance. At this point they will move to random points around the player. At any point during the Chase state the Fairy may decide to move to the Attack state. In the Attack state, the Fairy aims towards the player and then fires. Firing or failing to maintain aim on the player will move the Fairy back to the Chase state.
