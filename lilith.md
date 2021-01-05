@@ -24,4 +24,7 @@ The Fairy's movement while in the Chase state is somewhat complicated as there a
 
 Additionally, the Fairy will update its Navigation Mesh pathway a random amount of time (between a half a second and three seconds) after its last update in order to avoid calculations every frame while also ensuring the pathway is never stale for too long. During these updates, the Fairy will make a probability check to decide whether it should attack the player, partially based on its distance from the player. Additionally, if the Fairy moves close enough to the player it will update its pathway to move to a random point around the player within a certain radius. This way the Fairy never gets too close and instead dances around the player. The Fairy checks if it is getting too close by both distance to the player and by calculating the angle between its movement and the player.
 
-![Image1](/images/lilith/pistol.gif)
+![PistolShadow](/images/lilith/pistol.gif)
+![Turret](/images/lilith/turret.gif)
+![Fairy](/images/lilith/fairy.gif)
+![Textures](/images/lilith/textures.png)
