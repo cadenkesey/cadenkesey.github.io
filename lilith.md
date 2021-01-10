@@ -14,7 +14,11 @@ My goal with Lilith was to give myself an opportunity to learn both Unity and C#
 
 ## Player
 
+The player's movement is very simple. I used Unity's new input system which allows for controls to be remapped easily. It requires more coding to be done than the old system but it avoids hardcoding keymappings. The only real calculations being done for player movement are with the player's vertical speed. This includes checking if the player is on the ground, jumping, hitting the ceiling, or in the air. The player is also able to crouch, so checks are made to see if the player should be forced to crouch if there is no room to stand back up after entering a small area. The player is also able to be crushed by moving platforms.
+
 ![Shooting](/images/lilith/shoot.gif)
+
+The player can interact with certain objects throughout the game's world. This includes doors, messages, and platform switches. If the player is targeting one of these objects and presses the 'Use' key, a method will be evoked in the target object. The player is also able to shoot, which will produce a bullet hit effect wherever the player is targeting. Firing on the Fairy enemy will instead trigger a blood effect and will call a method in the enemy to inflict damage.
 
 ## Enemy 1: Fairy
 
