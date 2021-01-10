@@ -58,7 +58,22 @@ Rather than use Unity's built-in animator, I wrote my own scripts to handle the 
 
 ![FairyAngles](/images/lilith/fairyangles.gif)
 
-![Comparison](/images/lilith/comparison.png)
+My custom anination controller works by using recursive coroutines to play an animation. Each time the method is called, it will calculate the correct angle to be displayed, update the object's sprite renderer, update the object's emission map, and then wait the length of time specified for one frame of animation before calling the method again with the next animation index. This means that the animation can update its direction every frame.
+
+### Billboard Sprites
+
+In order for this method of rendering objects to work in a 3D environment, the sprites need to be billboards. This is when the sprites are always transformed to be parallel to the screen, otherwise they could appear to be like thin sheets of paper in the world. I accomplished this with a shader that ensures sprites are always rendered facing the player.
 
 ![PistolShadow](/images/lilith/pistol.gif)
+
+## Textures
+
+To create an interesting spaceship environment for the player to explore, I drew many different textures for walls, floors, and ceilings. In order to bring the world to life, I included a height map, a normal map, and an emission map with each texture. This can be seen in the image below:
+
+![Comparison](/images/lilith/comparison.png)
+
+##### Top Left: Texture | Top Right: Height Map | Bottom Left: Normal Map | Bottom Right: Emission Map
+
+A height map shows what levels each part of the texture should be rendered at. Black is the lowest and white is the highest. Unity will show this in-game by bringing the lighter sections on the height map forward on the original texture. A normal map shows how shadows should affect the texture. Normal maps show how the parts of the texture are angled, which means that Unity can then appropriately shadow parts of the texture depending on the light source for a more realistic environment. Finally, an emission map lets Unity know what areas are emitting light, so these areas will become light sources of their own in-game. All of these maps working together can be seen in the textures from the screenshot below:
+
 ![Textures](/images/lilith/textures.png)
