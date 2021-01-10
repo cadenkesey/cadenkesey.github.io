@@ -1,4 +1,4 @@
-# Personal Projects
+# Programming Projects
 
 * [Lilith: A 2.5D First Person Shooter in Unity](/lilith.md)
 * [Music Box: Using algorithms to compose songs (Willamette University Senior Thesis)](/musicbox.md)
@@ -7,7 +7,7 @@
 
 * [VISTAS: VISualization of Terrestrial-Aquatic Systems](http://blogs.evergreen.edu/vistas/vistas-software/)
 
-# Music Production and Compositions
+# Music Production and Composition
 
 * [Machine Grove](https://youtu.be/aiNK4ZttrPo)
 * [Soundtrack and composition work](https://cadenkesey.bandcamp.com/)
