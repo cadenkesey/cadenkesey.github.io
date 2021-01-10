@@ -56,5 +56,9 @@ The turret is much simpler than the Fairy in its AI. It is either active or deac
 
 Rather than use Unity's built-in animator, I wrote my own scripts to handle the animation of object sprites. This is to ensure that an animation can be viewed in different directions as it is playing, with each frame updating to reflect the player's position relative to the object.
 
+![FairyAngles](/images/lilith/fairyangles.gif)
+
+![Comparison](/images/lilith/comparison.png)
+
 ![PistolShadow](/images/lilith/pistol.gif)
 ![Textures](/images/lilith/textures.png)
