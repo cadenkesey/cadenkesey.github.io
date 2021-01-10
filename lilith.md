@@ -4,9 +4,9 @@
 
 This project is a simple first person shooter created in Unity and coded in C#. It utilizes sprites rather than 3D models to represent objects in the game world, much like early 90's shooters such as Doom and Marathon. It has basic features such as player movement (jumping, crouching, etc.), enemy AI (monsters and turrets), and shooting.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bYQVP_nNBZo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 * [Link to project code](https://github.com/cadenkesey/lilith)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bYQVP_nNBZo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Introduction
 
