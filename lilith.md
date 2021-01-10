@@ -14,7 +14,7 @@ My goal with Lilith was to give myself an opportunity to learn both Unity and C#
 
 ## Player
 
-The player's movement is very simple. I used Unity's new input system which allows for controls to be remapped easily. It requires more coding to be done than the old system but it avoids hardcoding keymappings. The only real calculations being done for player movement are with the player's vertical speed. This includes checking if the player is on the ground, jumping, hitting the ceiling, or in the air. The player is also able to crouch, so checks are made to see if the player should be forced to crouch if there is no room to stand back up after entering a small area. The player is also able to be crushed by moving platforms.
+The player's movement is very simple. I used Unity's new input system which allows for controls to be remapped easily. It requires more coding than the old system but it avoids hardcoding keymappings. The only real calculations for player movement is the player's vertical speed. This includes checking if the player is on the ground, jumping, hitting the ceiling, or in the air. The player is also able to crouch, so checks are made to see if the player should be forced to crouch if there is no room to stand back up after entering a small area. The player is also able to be crushed by moving platforms.
 
 ![Shooting](/images/lilith/shoot.gif)
 
