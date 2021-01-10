@@ -72,7 +72,7 @@ To create an interesting spaceship environment for the player to explore, I drew
 
 ![Comparison](/images/lilith/comparison.png)
 
-##### Top Left: Texture | Top Right: Height Map | Bottom Left: Normal Map | Bottom Right: Emission Map
+###### Top Left: Texture | Top Right: Height Map | Bottom Left: Normal Map | Bottom Right: Emission Map
 
 A height map shows what levels each part of the texture should be rendered at. Black is the lowest and white is the highest. Unity will show this in-game by bringing the lighter sections on the height map forward on the original texture. A normal map shows how shadows should affect the texture. Normal maps show how the parts of the texture are angled, which means that Unity can then appropriately shadow parts of the texture depending on the light source for a more realistic environment. Finally, an emission map lets Unity know what areas are emitting light, so these areas will become light sources of their own in-game. All of these maps working together can be seen in the textures from the screenshot below:
 
