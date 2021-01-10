@@ -22,7 +22,13 @@ The player can interact with certain objects throughout the game's world. This i
 
 ## Enemy 1: Fairy
 
-### Finite State Machine
+### Sprites
+
+Although the world of Lilith is a 3D environment, the objects in the game are made up of 2D sprites. The Fairy is no exception, with 8 different sprites to represent the various angles at which the Fairy can be viewed.
+
+![Fairy](/images/lilith/fairy.gif)
+
+### AI - Finite State Machine
 
 I used a finite state machine for the Fairy enemy since it is a straightforward and common design for AI in video games. I found tutorials from Table Flip Games to be particularly helpful: [Link to YouTube](https://youtu.be/21yDDUKCQOI). This design allows the Fairy to switch between four different states: Idle, Patrol, Chase, and Attack. My choice to use these states is influenced by the behavior of enemy AI in the original Doom games. The Idle state simply has the Fairy wait in place until a certain amount of time has passed, at which point the Fairy will enter the Patrol state. The Patrol state will move the Fairy to the next Patrol point, where the Fairy will enter the Idle state again. During either of these states the Fairy can move to the Chase state if the player comes within the Fairy's line of sight. The Chase state is the most complicated state. The Fairy wants to get close to the player, but also not so close as to run into the player. This means the Fairy will move towards the player until reaching a certain distance. At this point they will move to random points around the player. At any point during the Chase state the Fairy may decide to move to the Attack state. In the Attack state, the Fairy aims towards the player and then fires. Firing or failing to maintain aim on the player will move the Fairy back to the Chase state.
 
@@ -32,7 +38,23 @@ The Fairy's movement while in the Chase state is somewhat complicated as there a
 
 Additionally, the Fairy will update its Navigation Mesh pathway a random amount of time (between a half a second and three seconds) after its last update in order to avoid calculations every frame while also ensuring the pathway is never stale for too long. During these updates, the Fairy will make a probability check to decide whether it should attack the player, partially based on its distance from the player. Additionally, if the Fairy moves close enough to the player it will update its pathway to move to a random point around the player within a certain radius. This way the Fairy never gets too close and instead dances around the player. The Fairy checks if it is getting too close by both distance to the player and by calculating the angle between its movement and the player.
 
-![PistolShadow](/images/lilith/pistol.gif)
+## Enemy 2: Turret
+
+### Sprites
+
+The turret has more animations than the Fairy. This is because the turret has animations for activating and deactivating and can be viewed in 8 directions while in the middle of these animations.
+
 ![Turret](/images/lilith/turret.gif)
-![Fairy](/images/lilith/fairy.gif)
+
+The turret also has emission maps which allow its camera to glow when active and the turret to light up when firing.
+
+### Turret AI
+
+The turret is much simpler than the Fairy in its AI. It is either active or deactive, and will turn towards the player when the player is nearby and visible. The turret is able to keep track of multiple targets though, and will attack whatever target is closest. This means the turret is not designed to only attack the player, but can also attack the Fairy if they were in the same room together.
+
+## Animating Sprites
+
+Rather than use Unity's built-in animator, I wrote my own scripts to handle the animation of object sprites. This is to ensure that an animation can be viewed in different directions as it is playing, with each frame updating to reflect the player's position relative to the object.
+
+![PistolShadow](/images/lilith/pistol.gif)
 ![Textures](/images/lilith/textures.png)
